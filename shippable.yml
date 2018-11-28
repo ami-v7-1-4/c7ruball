@@ -8,6 +8,10 @@ rvm:
   - "jruby-9.2.3.0"
 
 build:
+  pre_ci_boot:
+    image_name: drydock/c7ruball
+    image_tag: master
+    pull: true
     
   ci:
     - ruby -v  
